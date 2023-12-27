@@ -1,0 +1,511 @@
+@font-face{
+    font-family: Frenchpress;
+        src: url("font/Frenchpress freefont.otf");
+}
+@font-face{
+    font-family: FreeHand;
+        src: url("font/Freehand-Regular.ttf");
+}
+::-webkit-scrollbar{
+    width: 0;
+}
+html{
+    position: relative;
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+body{
+    background-color: #f8f9e4;
+    position: relative;
+    box-sizing: border-box;
+
+}
+.header{
+    background-color: #DAAE88;  
+    margin: 0px 0px;
+    display: flex;  
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 160px;
+    margin-bottom: 38px;
+}
+.footer{
+    background-color: #DAAE88;  
+    margin: 0px 0px;
+    /* height: 120px; */
+    display: flex;  
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 160px;
+    margin-top: 38px;
+}
+.header .logo h1{
+    font-family: Grand Hotel;
+    color: rgb(246, 254, 202);
+    font-size: 5vw;
+    font-weight:500;
+    margin: 0px 0px;
+    text-shadow: 4px 2px 2px rgba(0, 0, 0, 0.54);
+    
+}
+.footer .logo h1{
+    font-family: Grand Hotel;
+    color: rgb(246, 254, 202);
+    font-size: 5vw;
+    font-weight:500;
+    margin: 0px 0px;
+    text-shadow: 4px 2px 2px rgba(0, 0, 0, 0.54);
+    
+}
+.header .logo{
+    /* margin-left: 160px; */
+}
+.footer .logo{
+    /* margin-right: 160px; */
+}
+/* .header .navigation{
+    margin-right: 160px;
+} */
+/* .footer .navigation{
+    margin-left: 160px;
+} */
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    display: inline;
+    font-family: Frenchpress;
+    font-size: 40px;
+    text-decoration: none;
+    
+}
+a{
+    text-decoration: none;
+    color:  rgb(246, 254, 202);;
+}
+a:link{
+    text-decoration: none;
+    color:  rgb(246, 254, 202);;
+}
+a:active {
+    text-decoration: underline;
+  }
+.menu li:not(:last-child){
+    margin-right: 26px;
+}
+.body{
+    padding: 0 160px;
+}
+.body__container{
+    background-color: #F9F9E4;
+    display: flex;
+    justify-content: start;
+}
+.body__container2{
+    background-color: #F9F9E4;
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+}
+.body__container3{
+    background-color: #F9F9E4;
+    display: flex;
+    justify-content: end;
+}
+.text1{
+    text-align: right;
+    color: #000;
+    font-family: Frenchpress;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 585px;
+    z-index: 2;
+    max-width: auto;
+}
+.text2{
+    text-align: left;
+    color: #000;
+    font-family: Frenchpress;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 585px;
+    margin-top: 125px;
+    z-index: 2;
+    max-width: auto;
+}
+.text3{
+    text-align: right;
+    color: #000;
+    font-family: Frenchpress;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 585px;
+    margin-top: 100px;
+    z-index: 2;
+    max-width: auto;
+}
+.burger{
+    width: auto;
+    height: auto;
+}
+.burger img{
+    width: 40vw;
+    height: auto;
+    z-index: 1;
+    transform:rotate(-16.33deg);
+}
+.burger2{
+    width: auto;
+    height: auto;
+}
+.burger2 img{
+    width: 40vw;
+    margin-top: 60px;
+    height: auto;
+    z-index: 1;
+    transform: rotate(+10.8deg);
+}
+.burger3{
+    width: auto;
+    height: auto;
+    margin-right: 10%; 
+}
+.burger3 img{
+    width: 20vw;
+    height: auto;
+    z-index: 1;
+}
+
+/* .body{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1920px;
+    height: 1000px;
+    gap: 50px;
+}
+.cards{
+    width: 300px;
+    height: 300px;
+    background-color: #DAAE88;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    border-radius: 30px;
+    position: absolute;
+} */
+.body_resipes {
+    display: flex;
+    height: auto;
+    gap: 29px;
+    padding: 0 160px;
+    flex-wrap: wrap;
+}
+.body_resipeUS{
+    height: auto;
+    gap: 29px;
+    padding: 0 160px;
+    flex-wrap: wrap;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+.cards{
+    /* width: calc((100% - 2 * 20px) / 3); Рассчитываем ширину для трех карточек с учетом отступов по бокам */
+    width: 380px;
+    height: 500px; /* Установите высоту по вашему усмотрению */
+    background-color: #F0F4D4;
+    border-radius: 30px;
+    /* margin-right: 20px; Убрал это свойство, так как мы используем gap в родительском контейнере */
+    box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.54); /* Добавляем тень */
+    padding: 21px;
+}
+.cards_item {
+    position: relative;
+}
+.card_logo img{
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    width: 340px; /* Учитывая отступы слева и справа по 20px */
+    height: 175px; /* 383.92 * (3/4) = 317.94, предполагаем соотношение сторон 4:3 */
+}
+/* card_main{
+    position: relative;
+} */
+.strela{
+    position: absolute;
+    right: -20px;
+    float: right;
+    bottom: -30px;
+
+}
+.strela img{
+    right: 0px;
+}
+.card_title p{
+    font-family: Frenchpress;
+    font-size: 40px;
+    margin: 0px;
+    color: #F00;   
+}
+.card_profession{
+    margin-top: 15px;
+}
+.card_profession p{
+margin: 0px;
+font-family: Ramona;
+font-size: 24px;
+}
+.card_profession2{
+    margin-top: 15PX;
+    position: relative;
+}
+.card_profession2 p{
+margin: 0px;
+font-family: Frenchpress;
+font-size: 35px;
+}
+.body_resipesinside{
+padding: 0 160px;
+display: flex;
+}
+.main_pic img{
+    width: 50vw;
+}
+.main_pic{
+    /* width: 80%; */
+}
+.main_picUS img{
+    width: 500px;
+}
+.main_title p{
+font-family: Frenchpress;
+font-size: 60px;
+color: #5ADA0C;
+font-weight: 400;
+margin: 0;
+}
+.main_title2RGB p{
+    font-family: Frenchpress;
+    font-size: 60px;
+    background: linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text; /* Для поддержки в браузерах на основе движка WebKit (Chrome, Safari) */
+    color: transparent;
+    font-weight: 400;
+    margin: 0;
+}
+.main_titleUS p{
+font-family: FreeHand;
+font-size: 70px;
+margin: 0;
+}
+.unmain_title p{
+    font-family: Frenchpress;
+    font-size: 25px;
+    font-weight: 400;
+    margin: 0;
+}
+.unmain_title li{
+    font-family: Frenchpress;
+    font-size: 25px;
+    font-weight: 400;
+    margin: 0;
+}
+.unmain_titleUS{
+    font-family: Frenchpress;
+    font-size: 35px;
+    font-weight: 400;
+    margin: 0;
+}
+.content_ins{
+    margin: 0;
+}
+.main_title2 p{
+    font-family: Frenchpress;
+    font-size: 60px;
+    font-weight: 400;
+    margin: 0;
+}
+.content_text{
+padding: 0 31px;
+margin: 0;
+}
+.content_textRGB{
+    padding: 0 31px;
+    margin: 0;
+    display: grid;
+    place-items: center;
+}
+.main_title2GREY p{
+    background-color: #D9D9D9;
+    font-family: Frenchpress;
+    font-size: 60px;
+    font-weight: 400;
+    margin: 0;
+    width: 438px;
+    text-align: right;
+    padding-right: 20px;
+}
+.main_title2GREY2 p{
+    background-color: #D9D9D9;
+    font-family: Frenchpress;
+    font-size: 60px;
+    font-weight: 400;
+    margin: 0 0 0 160px;
+    width: 438px;
+    text-align: left;
+    padding-right: 20px;
+}
+
+.flex1{
+    display: flex;
+}
+.body_resipesINS {
+    display: flex;
+    height: auto;
+    gap: 29px;
+    flex-wrap: wrap;
+}
+.body_resipesINS img{
+   width: 47%;
+   height: auto;
+}
+/*Медиа заппосы*/
+@media(max-width:1080px) {
+    .flex1{
+        display: block;
+    }
+    .content_text{
+        padding: 0;
+    }
+    .header{
+        display: block;
+        flex-wrap: wrap;
+        padding: 0;
+        text-align: center;
+    }
+    .footer{
+        display: block;
+        flex-wrap: wrap;
+        padding: 0;
+        text-align: center;
+    }
+    .burger img{
+        align-items: center;
+    }
+    .burger3{
+        display: none;
+    }
+    .body__container{
+        display: block;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+        position: relative;
+    }
+    .body__container2{
+        display: block;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+        position: relative;
+    }
+    .body__container3{
+        display: block;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+        position: relative;
+    }
+    .body{
+        padding: 0;
+    }
+    .text1{
+        text-align: center;
+        align-items: center;
+        display: contents;
+        width: 50vw;
+        height: auto;
+    }
+    .text2{
+        text-align: center;
+        align-items: center;
+        display: contents;
+        width: 50vw;
+        height: auto;
+    }
+    .text3{
+        text-align: center;
+        align-items: center;
+        display: contents;
+        width: 50vw;
+        height: auto;
+    }
+    .body_resipes{
+        padding: 0;
+        margin: 0;
+        display: block;
+    }
+    .cards {
+        width: 100%; /* Ширина 100% экрана */
+        max-width: 380px; /* Максимальная ширина карточки товара */
+        margin: 0 auto; /* Устанавливаем отступы по бокам, чтобы карточка оставалась по центру */
+        margin-bottom: 10px;
+    }
+    .card_logo img {
+        width: 100%; /* Сделаем ширину изображения 100% от ширины родительского контейнера (карточки) */
+        height: auto; /* Сохраняем соотношение сторон изображения */
+        border-radius: 30px; /* Если есть скругление, применяем его */
+    }
+    .body_resipesinside{
+        padding: 0px;
+        margin: 0px auto;
+    }
+    .body_resipeUS{
+        padding: 0px;
+        margin: 0px auto;
+    }
+    .main_picUS{
+        width: auto;
+        height: auto;
+        text-align: center;
+    }
+    .main_picUS img{
+        width: 80vw;
+        height: auto;
+    }
+    
+    .main_pic{
+        width: auto;
+        height: auto;
+        text-align: center;
+    }
+    .main_pic img{
+        width: 70vw;
+        height: auto;
+    }
+    .main_title2GREY p{
+        width: 40vw;
+        margin: 0;
+        text-align: center;
+    }
+    .main_title2GREY{
+        text-align: center;
+    }
+    .main_title2GREY2 p{
+        width: 50vw;
+        margin: 0;
+    }
+    .unmain_title p{
+       padding: 0 20px;
+    }
+}
